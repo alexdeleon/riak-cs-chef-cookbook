@@ -52,7 +52,7 @@ when "rhel"
   yum_repository "basho" do
     repo_name "basho"
     description "Basho Stable Repo"
-    url "http://yum.basho.com/el/#{node['platform_version'].to_i}/products/x86_64/"
+    url "http://yum.basho.com/el/#{platform_version}/products/x86_64/"
     key "RPM-GPG-KEY-basho"
     action :add
   end
