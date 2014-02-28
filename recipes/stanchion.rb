@@ -41,6 +41,7 @@ when "debian"
     version package_version
   end
 when "rhel"
+  platform_version=6 if node[:platform] == 'amazon'
   include_recipe "yum"
 
   yum_key "RPM-GPG-KEY-basho" do
