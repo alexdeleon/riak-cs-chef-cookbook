@@ -17,7 +17,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-node.default[:platform_version]=6 if node[:platform] == 'amazon'
 include_recipe "ulimit" unless node['platform_family'] == "debian"
 
 if node['riak_cs']['package']['enterprise_key'].empty?
